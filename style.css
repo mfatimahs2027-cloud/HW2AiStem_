@@ -1,0 +1,401 @@
+/* ====================================
+   LAYER 1 — GLOBAL STYLES & LAYOUT
+==================================== */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY TYPOGRAPHY */
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background-color: #0d0b12;
+  color: #e6e0ff;
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION SPACING */
+.section {
+  padding: 60px 0;
+}
+
+/* BUTTONS */
+button,
+.button {
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+button:hover,
+.button:hover {
+  transform: scale(1.05);
+}
+
+/* HEADER */
+.site-header {
+  background: #15121f;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(180, 120, 255, 0.3);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo a {
+  color: #c9a8ff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* NAVIGATION */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: #e6e0ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #c9a8ff;
+}
+
+/* MOBILE HEADER */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-nav ul {
+    gap: 15px;
+  }
+}
+
+/* ====================================
+   LAYER 2 — HOME PAGE STYLING
+==================================== */
+
+.slide-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.slide {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* ABOUT PREVIEW */
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #1a1625;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(180, 120, 255, 0.2);
+}
+
+/* GALLERY PREVIEW */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+/* ====================================
+   LAYER 3 — PAGE SPECIFIC STYLING
+==================================== */
+
+/* ABOUT PAGE */
+.two-column {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.two-column .col {
+  flex: 1;
+}
+
+.two-column img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
+}
+
+/* GALLERY PAGE */
+.gallery-grid-section .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid-section img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.gallery-grid-section img:hover {
+  transform: scale(1.05);
+}
+
+/* ====================================
+   CONTACT PAGE — UPGRADED STYLING
+==================================== */
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(180, 120, 255, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover glow on whole form */
+.contact-form:hover {
+  box-shadow: 0 0 25px rgba(180, 120, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Base input + textarea styling */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(180, 120, 255, 0.3);
+  background: #1a1625;
+  color: #e6e0ff;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+/* Glow + slide-up on focus */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(200, 150, 255, 0.9);
+  box-shadow: 0 0 15px rgba(180, 120, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+/* Contact form button */
+.contact-form button {
+  padding: 12px 22px;
+  background: purple;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #b300b3;
+  box-shadow: 0 0 18px rgba(180, 120, 255, 0.7);
+  transform: translateY(-1px);
+}
+
+/* ====================================
+   THEME TOGGLE BUTTON
+==================================== */
+
+.theme-toggle {
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+/* PURPLE THEME MODE */
+body.purple-theme {
+  background-color: #e6d6ff;
+  color: black;
+}
+
+/* ====================================
+   GLOBAL ANIMATIONS (STRONG)
+==================================== */
+
+/* Page-load animation */
+.page-load {
+  opacity: 0;
+  transform: scale(0.92);
+  animation: pageLoadAnim 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes pageLoadAnim {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Base scroll animation state */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+/* When visible */
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Strong slide-up */
+.slide-up {
+  transform: translateY(60px);
+}
+
+/* Strong slide-left */
+.slide-left {
+  transform: translateX(-80px);
+}
+
+/* Strong slide-right */
+.slide-right {
+  transform: translateX(80px);
+}
+
+/* Fade-in only */
+.fade-in {
+  transform: scale(0.9);
+}
+
+/* ====================================
+   GALLERY HOVER GLOW
+==================================== */
+
+.gallery-grid img {
+  transition: 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(180, 120, 255, 0.8);
+}
