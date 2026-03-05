@@ -1,0 +1,411 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Animals from Land, Mountains and the Sea</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PAGE-SPECIFIC ADJUSTMENTS -->
+  <style>
+    .slide-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .slide-title {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 18px;
+      background: rgba(0,0,0,0.5);
+      padding: 5px 10px;
+      color: white;
+      border-radius: 4px;
+    }
+
+    .slide {
+      position: relative;
+    }
+
+    .main-nav ul {
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+
+    .service-image {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    /* --- FIX MODAL LAYOUT --- */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-y: auto;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: white;
+      max-width: 800px;
+      width: 100%;
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+    }
+
+    .modal-content img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .modal-text {
+      text-align: left;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <div class="logo">
+        <a href="index.html">Animals from Land, Mountains and the Sea</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">☰</div>
+
+      <!-- THEME TOGGLE BUTTON -->
+      <button class="theme-toggle">🌑</button>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- HERO SLIDER -->
+    <section class="hero-slider section fade-in scroll-animate">
+      <div class="container slide-container">
+
+        <!-- SLIDE 1 -->
+        <div class="slide"
+          data-title="Big Cats"
+          data-image="https://i.pinimg.com/1200x/11/0c/2f/110c2f9786ede37dc2e3241f49c88909.jpg"
+          data-content="
+          <h3>Big Cats</h3>
+          <p>These are the ones that can roar and are the biggest/most famous wild cats:</p>
+          <h4>Core Big Cats (the classic 5)</h4>
+          <ul>
+            <li>Lion</li>
+            <li>Tiger</li>
+            <li>Leopard</li>
+            <li>Jaguar</li>
+            <li>Snow Leopard</li>
+          </ul>
+          <p>Some groups expand it to include:</p>
+          <ul>
+            <li>Cheetah — super fast runner</li>
+            <li>Cougar — sneaky and adaptable</li>
+            <li>Clouded Leopard & Sunda Clouded Leopard — great climbers</li>
+          </ul>
+          <p>The strict count is 5 big cat species, but people often talk about 7 or 8.</p>
+          <h4>Personalities</h4>
+          <p><strong>Lion</strong> — Confident team leader, social king.</p>
+          <p><strong>Tiger</strong> — Strong, independent lone warrior.</p>
+          <p><strong>Leopard</strong> — Clever, sneaky ninja.</p>
+          <p><strong>Jaguar</strong> — Bold, powerful powerhouse.</p>
+          <p><strong>Snow Leopard</strong> — Quiet, shy mountain ghost.</p>
+          <p><strong>Cheetah</strong> — Speedy, nervous sprinter.</p>
+          <p><strong>Cougar</strong> — Stealthy, quiet explorer.</p>
+          ">
+          <img src="https://i.pinimg.com/1200x/11/0c/2f/110c2f9786ede37dc2e3241f49c88909.jpg" alt="">
+          <div class="slide-title">Big Cats</div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide"
+          data-title="The GOAT"
+          data-image="https://i.pinimg.com/1200x/73/ae/10/73ae1099c4f09c96269c8cc70d2b8589.jpg"
+          data-content="
+          <h3>The GOAT</h3>
+          <p>Goats are curious, smart animals found in domestic and wild forms.</p>
+
+          <h4>Domestic Goats</h4>
+          <p>One of the first domesticated animals — 10,000 years ago.</p>
+          <ul>
+            <li>200–300+ breeds</li>
+            <li>Used for milk, meat, fiber, companionship</li>
+            <li>Very social, playful, and clean eaters</li>
+          </ul>
+
+          <h4>Wild Goats</h4>
+          <ul>
+            <li>Ibex</li>
+            <li>Markhor (national animal of Pakistan)</li>
+            <li>Tur</li>
+            <li>Walia ibex</li>
+          </ul>
+
+          <p>Markhor have huge spiral horns up to 5 feet long.</p>
+          ">
+          <img src="https://i.pinimg.com/1200x/73/ae/10/73ae1099c4f09c96269c8cc70d2b8589.jpg" alt="">
+          <div class="slide-title">The GOAT</div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide"
+          data-title="Sharks"
+          data-image="https://i.pinimg.com/736x/dd/e5/7d/dde57d61378e6688bd1f2445ea6fceae.jpg"
+          data-content="
+          <h3>Sharks</h3>
+          <p>Sharks are ancient ocean predators — over 450 million years old.</p>
+
+          <h4>Species Count</h4>
+          <p>500+ species, with new ones still being discovered.</p>
+
+          <h4>Habitats</h4>
+          <ul>
+            <li>Coral reefs</li>
+            <li>Open ocean</li>
+            <li>Deep sea</li>
+            <li>Polar waters</li>
+            <li>Tropical seas</li>
+          </ul>
+
+          <h4>Fun Facts</h4>
+          <ul>
+            <li>No bones — made of cartilage</li>
+            <li>Super senses</li>
+            <li>Thousands of teeth in a lifetime</li>
+            <li>Some must swim to breathe</li>
+            <li>Baby sharks = pups</li>
+          </ul>
+
+          <h4>Famous Sharks</h4>
+          <ul>
+            <li>Whale Shark — largest fish</li>
+            <li>Great White — powerful hunter</li>
+            <li>Mako — fastest shark</li>
+            <li>Hammerhead — wide vision</li>
+            <li>Tiger Shark — eats almost anything</li>
+            <li>Dwarf Lanternshark — smallest</li>
+            <li>Greenland Shark — lives hundreds of years</li>
+          </ul>
+          ">
+          <img src="https://i.pinimg.com/736x/dd/e5/7d/dde57d61378e6688bd1f2445ea6fceae.jpg" alt="">
+          <div class="slide-title">Sharks</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="modal-image" src="" alt="">
+        <div class="modal-text">
+          <h2 id="modal-title"></h2>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="about-preview section slide-left scroll-animate">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="images/hero1.jpg" alt="About preview">
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>Short introduction text goes here.</p>
+            <a href="about.html" class="button">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section slide-up scroll-animate">
+      <div class="container">
+        <h2>Services</h2>
+
+        <div class="services-grid">
+
+          <!-- SERVICE 1 -->
+          <div class="service-card">
+            <h3>Help Wild Cats</h3>
+            <img src="https://i.pinimg.com/1200x/45/7c/5c/457c5c177303321015cfad85569a8ccd.jpg" alt="Help Wild Cats" class="service-image">
+
+            <p>Many wild cat species are endangered due to various threats such as habitat loss, poaching, and illegal wildlife trade. Endangered species include the Asiatic lion, tigers, leopards, and several small wild cats.</p>
+            <p>Help these cats with the links below:</p>
+
+            <h4>Help Wild Cats:</h4>
+            <ul>
+              <li><a href="https://felidaefund.org/" target="_blank">Felidae Conservation Fund</a></li>
+              <li><a href="https://www.wildcatsanctuary.org/support-tws/volunteer/" target="_blank">Wildcat Sanctuary Volunteer</a></li>
+              <li><a href="https://bigcatrescue.org/" target="_blank">Big Cat Rescue</a></li>
+              <li><a href="https://bigcatswildcats.com/organizations/wild-cat-rescue-and-sanctuaries/" target="_blank">Wild Cat Rescue Organizations</a></li>
+              <li><a href="https://www.humaneworld.org/en/resources/find-wildlife-rescue-and" target="_blank">Humane World Wildlife Rescue</a></li>
+              <li><a href="https://impactful.ninja/best-charities-for-big-cats/" target="_blank">Best Big Cat Charities</a></li>
+            </ul>
+          </div>
+
+          <!-- SERVICE 2 -->
+          <div class="service-card">
+            <h3>Help Sharks</h3>
+            <img src="https://i.pinimg.com/1200x/77/8e/a7/778ea7cfc5314e07f7d345da2c57a547.jpg" alt="Help Sharks" class="service-image">
+
+            <p>Sharks are among the most threatened marine species, with overfishing, habitat loss, and finning driving many toward extinction.</p>
+
+            <p><strong>Threats to Sharks:</strong> Shark populations are declining rapidly due to overfishing, bycatch, and habitat destruction. Up to 100 million sharks are killed annually, often for their fins or meat. Many are caught before reaching maturity, limiting population recovery. Pollution, coastal development, and prey loss worsen the decline.</p>
+
+            <p><strong>Endangered Shark Species:</strong></p>
+            <ul>
+              <li>Great Hammerhead — threatened by finning and habitat loss.</li>
+              <li>Angelshark — critically endangered due to overfishing.</li>
+              <li>Oceanic Whitetip — declining from longline fisheries.</li>
+              <li>Dusky Shark — vulnerable due to slow reproduction.</li>
+              <li>Pondicherry Shark — critically endangered, possibly extinct.</li>
+              <li>Lost Shark — extremely rare, fewer than 50 adults known.</li>
+            </ul>
+
+            <p>Global shark and ray populations have declined by 70% in 50 years. Conservation efforts include trade bans, bycatch reduction, and finning restrictions. Sharks are vital apex predators that keep oceans healthy.</p>
+
+            <h4>Help Sharks:</h4>
+            <ul>
+              <li><a href="https://sharkallies.org/" target="_blank">Shark Allies</a></li>
+              <li><a href="https://impactful.ninja/best-charities-for-sharks/" target="_blank">Best Shark Charities</a></li>
+              <li><a href="https://nonprofitpoint.com/best-shark-charities/" target="_blank">Nonprofit Shark Charities</a></li>
+              <li><a href="https://sharkangels.org/" target="_blank">Shark Angels</a></li>
+            </ul>
+          </div>
+
+          <!-- SERVICE 3 -->
+          <div class="service-card">
+            <h3>Help Goats</h3>
+            <img src="https://i.pinimg.com/736x/31/9b/c3/319bc3c075a4ae2e07053cdfbc24e46f.jpg" alt="Help Goats" class="service-image">
+
+            <p>Uncontrolled goat populations can cause environmental challenges, affecting vegetation, soil, biodiversity, and water quality. Understanding these impacts is important for ecological balance.</p>
+
+            <p>Of the 576 goat breeds worldwide, 19 are extinct, 90 are at risk, and 310 have no conservation data. Several U.S. breeds are on conservation priority lists.</p>
+
+            <h4>Help Goats:</h4>
+            <ul>
+              <li><a href="https://www.theoldgoatshome.org/#/" target="_blank">The Old Goats Home</a></li>
+              <li><a href="https://www.frederickfarmgoats.com/help" target="_blank">Frederick Farm Goats</a></li>
+              <li><a href="https://www.goatsforgood.charity/how-we-help" target="_blank">Goats for Good</a></li>
+              <li><a href="https://www.petgoats.org/" target="_blank">Pet Goats Organization</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY PREVIEW -->
+    <section class="gallery-preview section fade-in scroll-animate">
+      <div class="container">
+        <h2>Gallery Preview</h2>
+        <div class="gallery-grid">
+          <img src="images/gallery01.jpg" alt="">
+          <img src="images/gallery02.jpg" alt="">
+          <img src="images/gallery03.jpg" alt="">
+          <img src="images/gallery04.jpg" alt="">
+          <img src="images/gallery05.jpg" alt="">
+          <img src="images/gallery06.jpg" alt="">
+        </div>
+        <a href="gallery.html" class="button">View Full Gallery</a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section slide-right scroll-animate">
+      <div class="container">
+        <h2>Ready to Work Together?</h2>
+        <p>Contact me for projects or collaborations.</p>
+        <a href="contact.html" class="button">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- CONTACT PREVIEW -->
+    <section class="contact-preview section slide-up scroll-animate">
+      <div class="container">
+        <h2>Quick Contact</h2>
+        <form>
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Animals from Land, Mountains and the Sea. by Mahnoor Fatima All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL SCRIPT -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+    const closeBtn = document.querySelector('.close-btn');
+
+    slides.forEach(slide => {
+      slide.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = slide.dataset.image;
+        modalTitle.textContent = slide.dataset.title;
+        modalBody.innerHTML = slide.dataset.content;
